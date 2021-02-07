@@ -74,7 +74,7 @@ class Geizhals():
         soup = BeautifulSoup(request.text, 'html.parser')
 
         # parse name
-        raw = soup.find('h1', attrs={'class': 'gh-headline'})
+        raw = soup.find('h1', attrs={'class': 'variant__header__headline'})
         self.device.name = raw.string.replace('\n', '')
 
         # parse prices
@@ -111,5 +111,5 @@ def _url2id(id_or_url):
     # get product_id from valid url
     soup = BeautifulSoup(request.text, 'html.parser')
     phist_url = soup.select(
-        '.productpage__overview-links--pricehistory')[0].attrs['href']
+        '.variant__header__options-list__item-link')[0].attrs['href']
     return re.search(r'phist\=(\d+)$', phist_url).group(1)
