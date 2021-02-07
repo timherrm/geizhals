@@ -1,6 +1,7 @@
 from functools import wraps
 from requests.exceptions import HTTPError
 
+
 def except_httperror(func):
     def _decorator(request, *args, **kwargs):
         try:

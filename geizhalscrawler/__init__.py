@@ -1,8 +1,8 @@
-"""Init file for Geizhals."""
+"""Init file for Geizhalscrawler."""
 from pkg_resources import get_distribution, DistributionNotFound
-from .geizhals import Device, Geizhals
+from .geizhalscrawler import Device, Geizhals
 
-NAME = "geizhals"
+NAME = "geizhalscrawler"
 try:
     __version__ = get_distribution(__name__).version
 except DistributionNotFound:

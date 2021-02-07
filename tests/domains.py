@@ -2,7 +2,7 @@ import unittest
 from random import uniform
 from time import sleep
 from tests.exception_decorator import except_httperror
-from geizhals import Geizhals
+from geizhalscrawler import Geizhals
 
 
 class TestStringMethods(unittest.TestCase):
